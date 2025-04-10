@@ -7,9 +7,9 @@
 #include <cstdlib>
 #include <exception>
 #include <iostream>
+#include <json.hpp>
 #include <limits>
 #include <netcdf>
-#include <nlohmann/json.hpp>
 #include <string>
 #include <vector>
 
