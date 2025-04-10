@@ -38,7 +38,14 @@ int main(int argc, char* argv[]) {
 
   crow::SimpleApp app;
 
-  CROW_ROUTE(app, "/")([] { return "Hello world"; });
+  CROW_ROUTE(app, "/")([] {
+    return "Usage:\n"
+           "/get-info to display file metadata\n"
+           "/get-data?t=t_index&z=z_index to display JSON of concentration "
+           "data\n"
+           "/get-image?t=t_index&z=z_index to display PNG of concentration "
+           "data";
+  });
 
   CROW_ROUTE(app, "/get-info")([&nc_file] {
     // dimensions
