@@ -222,5 +222,5 @@ int main(int argc, char* argv[]) {
         }
       });
 
-  app.port(18080).multithreaded().run();
+  app.port(18080).run();
 }
